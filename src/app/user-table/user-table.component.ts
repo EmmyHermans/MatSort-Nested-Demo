@@ -23,8 +23,19 @@ export class UserTableComponent implements OnInit {
   public dataSource = new MatTableDataSource<IUser>();
 
   constructor() {
-    this.dataSource.sortingDataAccessor =
-      sortingDataAccessor.nestedCaseInsensitive;
+    this.dataSource.sortingDataAccessor = (data, sortHeaderId) => {
+      switch (sortHeaderId) {
+        case 'username': {
+          return sortingDataAccessor.caseInsensitive(data, sortHeaderId);
+        }
+        case 'streetName': {
+          return sortingDataAccessor.nestedProperty(data, sortHeaderId);
+        }
+        default: {
+          return sortingDataAccessor.nestedCaseInsensitive(data, sortHeaderId);
+        }
+      }
+    };
   }
 
   @ViewChild(MatSort) set matSort(sort: MatSort) {
