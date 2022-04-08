@@ -25,10 +25,10 @@ export class UserTableComponent implements OnInit {
   constructor() {
     this.dataSource.sortingDataAccessor = (data, sortHeaderId) => {
       switch (sortHeaderId) {
-        case 'username': {
+        case 'name': {
           return sortingDataAccessor.caseInsensitive(data, sortHeaderId);
         }
-        case 'streetName': {
+        case 'address.streetName': {
           return sortingDataAccessor.nestedProperty(data, sortHeaderId);
         }
         default: {

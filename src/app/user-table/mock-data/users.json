@@ -45,7 +45,7 @@
     "address": {
       "streetName": "Nova",
       "streetNumber": 1429,
-      "postalCode": "6234 AB",
+      "postalCode": "6234 ab",
       "town": "Cetinje"
     }
   },
@@ -86,7 +86,7 @@
       "streetName": "Comanche",
       "streetNumber": 62575,
       "postalCode": "656546",
-      "town": "Pakemitan"
+      "town": "pakemitan"
     }
   },
   {
@@ -113,7 +113,7 @@
     "id": 12,
     "name": "Townsend Starmore",
     "address": {
-      "streetName": "Lake View",
+      "streetName": "lake View",
       "streetNumber": 73955,
       "postalCode": "85600-000",
       "town": "Francisco Beltrão"
@@ -126,7 +126,7 @@
       "streetName": "Donald",
       "streetNumber": 90,
       "postalCode": "8463 AA",
-      "town": "Sangkalputung"
+      "town": "sangkalputung"
     }
   },
   {
@@ -163,7 +163,7 @@
     "id": 17,
     "name": "Felice Catmull",
     "address": {
-      "streetName": "Fair Oaks",
+      "streetName": "fair Oaks",
       "streetNumber": 93,
       "postalCode": "831 37",
       "town": "Östersund"
@@ -183,10 +183,10 @@
     "id": 19,
     "name": "Millisent Drinkwater",
     "address": {
-      "streetName": "Miller",
+      "streetName": "miller",
       "streetNumber": 1,
       "postalCode": "5209",
-      "town": "Tambong"
+      "town": "tambong"
     }
   },
   {

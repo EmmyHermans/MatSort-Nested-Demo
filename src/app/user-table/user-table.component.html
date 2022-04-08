@@ -39,21 +39,35 @@
       </ng-container>
 
       <ng-container matColumnDef="streetNumber">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Street Number</th>
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header="address.streetNumber"
+        >
+          Street Number
+        </th>
         <td mat-cell *matCellDef="let user" class="text">
           {{ user.address.streetNumber }}
         </td>
       </ng-container>
 
       <ng-container matColumnDef="postalCode">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Postal Code</th>
+        <th
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header="address.postalCode"
+        >
+          Postal Code
+        </th>
         <td mat-cell *matCellDef="let user" class="text">
           {{ user.address.postalCode }}
         </td>
       </ng-container>
 
       <ng-container matColumnDef="town">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Town</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="address.town">
+          Town
+        </th>
         <td mat-cell *matCellDef="let user" class="text">
           {{ user.address.town }}
         </td>
