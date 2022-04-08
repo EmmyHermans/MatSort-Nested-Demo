@@ -3,6 +3,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { IUser } from './model/user.model';
 import users from './mock-data/users.json';
+import sortingDataAccessor from '../shared/sortingDataAccessor';
 
 @Component({
   selector: 'app-user-table',
@@ -12,7 +13,7 @@ import users from './mock-data/users.json';
 export class UserTableComponent implements OnInit {
   public readonly displayedColumns = [
     'id',
-    'name',
+    'username',
     'streetName',
     'streetNumber',
     'postalCode',
@@ -20,7 +21,11 @@ export class UserTableComponent implements OnInit {
   ];
 
   public dataSource = new MatTableDataSource<IUser>();
-  constructor() {}
+
+  constructor() {
+    this.dataSource.sortingDataAccessor =
+      sortingDataAccessor.nestedCaseInsensitive;
+  }
 
   @ViewChild(MatSort) set matSort(sort: MatSort) {
     // this needs to be a setter to ensure sort is added AFTER it is defined in the template, otherwise it won't work
